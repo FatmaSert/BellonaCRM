@@ -13,7 +13,7 @@ Proje, temel olarak iki ana teknik evreden oluşmaktadır: Veri Toplama (Data Co
 **2.1 Veri Toplama Süreci (Web Scraping)**
 
 Veri toplama işlemi için Python programlama dili ve BeautifulSoup kütüphanesi kullanılarak özel bir web kazıma algoritması (scraper) geliştirilmiştir. Bu algoritma aşağıdaki teknik prensiplerle çalışmaktadır:
-Dinamik Sayfalandırma (Pagination): Algoritma, şikayetlerin listelendiği ana sayfaları (page=1, page=2 vb.) iteratif olarak gezmektedir. Bu süreçte, sayfa yönlendirmeleri (redirection) kontrol edilerek, var olmayan bir sayfaya gidildiğinde (örneğin son sayfadan sonra başa dönme durumu) tarama işlemi otomatik olarak sonlandırılmaktadır.
+- **Dinamik Sayfalandırma (Pagination)**: Algoritma, şikayetlerin listelendiği ana sayfaları (page=1, page=2 vb.) iteratif olarak gezmektedir. Bu süreçte, sayfa yönlendirmeleri (redirection) kontrol edilerek, var olmayan bir sayfaya gidildiğinde (örneğin son sayfadan sonra başa dönme durumu) tarama işlemi otomatik olarak sonlandırılmaktadır.
 
 - **Tam Metin Çıkarımı**: Liste sayfalarından elde edilen her bir şikayet bağlantısı (URL) detaylı bir şekilde ziyaret edilmektedir. Sadece başlık değil, şikayetin tüm detaylarını içeren "Full Text" (tam metin), kullanıcı adı, tarih ve şikayet ID'si gibi özellikler ayrıştırılmaktadır (parsing).
 - **Eşzamanlı İşleme (Concurrency)**: Veri toplama hızını artırmak ve ağ gecikmelerini minimize etmek amacıyla concurrent.futures.ThreadPoolExecutor kullanılarak çoklu iş parçacığı (multithreading) mimarisi uygulanmıştır. Bu sayede aynı anda 5 farklı şikayet sayfası işlenebilmekte, toplam işlem süresi önemli ölçüde düşürülmektedir.
