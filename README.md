@@ -23,9 +23,9 @@ Elde edilen veriler, yapısal bir format olan CSV (bellona_sikayetleri.csv) dosy
 **2.2 Veri Ön İşleme ve Zenginleştirme**
 
 Ham veri analize girmeden önce temizlik ve birleştirme işlemlerine tabi tutulmuştur:
-Metin Birleştirme: Şikayet başlığı (Title) ve şikayet detayı (Full Text) birleştirilerek, analizin daha geniş bir bağlamda yapılması sağlanmıştır.
-Normalizasyon: Tüm metinler küçük harfe çevrilerek, büyük/küçük harf duyarlılığından kaynaklanabilecek analiz hatalarının önüne geçilmiştir.
-Eksik Veri Yönetimi: Boş alanlar doldurularak veri bütünlüğü sağlanmıştır
+- **Metin Birleştirme**: Şikayet başlığı (Title) ve şikayet detayı (Full Text) birleştirilerek, analizin daha geniş bir bağlamda yapılması sağlanmıştır.
+- **Normalizasyon**: Tüm metinler küçük harfe çevrilerek, büyük/küçük harf duyarlılığından kaynaklanabilecek analiz hatalarının önüne geçilmiştir.
+- **Eksik Veri Yönetimi**: Boş alanlar doldurularak veri bütünlüğü sağlanmıştır
 
 **2.3 Analiz ve Kategorizasyon Stratejisi**
 
