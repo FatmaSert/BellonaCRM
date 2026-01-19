@@ -41,7 +41,7 @@ Yapılan kod analizi ve veri incelemesi sonucunda projenin şu teknik yetkinlikl
 Veri Kalitesi Güvencesi: Özellikle "Full Text" (Tam Metin) alanının doğru çekilmesi için yapılan son düzeltmeler, analizin yüzeysel başlıklardan ziyade detaylı müşteri deneyimlerine dayanmasını sağlamıştır.
 Dinamik Kategori Tespiti: Proje statik bir analizden ziyade, veriye dayalı olarak kategorilerini geliştiren ("Diğer" kategorisindeki verilerin incelenmesi gibi) iteratif bir yapıdadır.
 
-**4. Sonu**
+**4. Sonuç**
 
 Bu proje, bir öğrenci çalışması olarak, veri bilimi yaşam döngüsünün kritik aşamaları olan veri toplama, temizleme ve keşifsel analiz süreçlerini başarıyla modellemektedir. Yapılan çalışma, Bellona markasının müşteri deneyimi karnesini çıkarmak için gerekli teknik altyapıyı sağlamış olup, marka yetkililerine "teslimat süreleri" ve "çağrı merkezi iletişimi" gibi spesifik alanlarda iyileştirme yapmaları gerektiğini gösteren somut veriler sunmaktadır.
 
