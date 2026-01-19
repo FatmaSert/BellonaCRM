@@ -5,15 +5,25 @@ Bu rapor, Bellona markasına yönelik dijital platformlarda (Şikayetvar.com) ye
 2. Mevcut Durum ve Veri Analizi
 Proje kapsamında geliştirilen veri madenciliği algoritmaları ile yüzlerce güncel müşteri şikayeti "tam metin" olarak analiz edilmiştir. Elde edilen veriler, şikayetlerin münferit vakalar olmaktan çıkıp, belirli alanlarda sistematik sorunlara dönüştüğünü göstermektedir.
 2.1 Öne Çıkan Sorun Dağılımı
+<img width="798" height="425" alt="image" src="https://github.com/user-attachments/assets/fc1e30b9-88da-4bd0-b603-b540490e9cfa" />
 
 %40 - Teslimat ve Lojistik: Taahhüt edilen (genellikle 45 gün) teslimat sürelerinin aşıldığı, kısmi teslimat yapıldığı veya yanlış ürün gönderildiği tespit edilmiştir.
 %35 - Ürün Kalitesi (Erken Deformasyon): Müşterilerin önemli bir kısmı, ürün tesliminden sonraki ilk 3-6 ay içinde "kumaş tüylenmesi", "sünger çökmesi" ve "dikiş hatası" gibi kalite sorunları bildirmektedir.
 %25 - İletişim ve Servis: Şikayetlerin çözümsüz kalmasındaki en büyük etkenin, bayiler ve genel merkez arasındaki kopukluk olduğu, müşterilerin "muhatap bulamama" sorunu yaşadığı görülmüştür.
 
-<img width="1196" height="624" alt="image" src="https://github.com/user-attachments/assets/5ed25021-2b39-4e38-9c7d-3ffb1a2d4dc4" />
 
 
 2.2 Alt Kırılmların Dağılımı
+<img width="716" height="577" alt="image" src="https://github.com/user-attachments/assets/8a578527-dcfb-497f-ba72-0fb097296ed1" />
+
+
+<img width="538" height="553" alt="image" src="https://github.com/user-attachments/assets/cbb6b832-c315-41f1-97d9-1d5549cab2a4" />
+
+
+<img width="580" height="550" alt="image" src="https://github.com/user-attachments/assets/1931fe11-b053-4898-86a1-753de7c9fcb1" />
+
+
+
 
 Teslimat ve Lojistik kategorisinde en önemli şikayet konusu %77.3 ile aşırı gecikmedir.
 
@@ -23,27 +33,44 @@ Teslimat ve Lojistik kategorisinde en önemli şikayet konusu %77.3 ile aşırı
 Servis ve İletişim kök nedeni alt kırılımlara ayrıldığında çeşitli nedenlar vardır. Ancak kaba üslup, yalan beyan ve ulaşılamama bu kategorideki en önemli sorunlardır.
 2.3 En Sorunlu Modeller
 Şikayetlerde model ismi belirten kullanıcıların yorumlarına dayalı olarak sorunlu modeller aşağıda belirtilmiştir.
+<img width="945" height="462" alt="image" src="https://github.com/user-attachments/assets/89278846-09df-4ab8-81af-1b7e43790ea3" />
+
 
 Buna göre  Valencia, Estella ve Larissa modelleri en problemli modeller olarak görülmektedir.
 2.4 Sabır Endeksi
 Verilere göre tüm müşteriler anında şikayet etmemektedir. Tarihsel olarak incelendiğinde kimi müşteriler anında şikayet etmeye başlamışken bazı müşteriler ise belirli bir süre sonra şikayet etmeye başlamışlardır. Aşağıdaki grafikte sabır endeksi grafiği sunulmuştur.
+<img width="945" height="453" alt="image" src="https://github.com/user-attachments/assets/09aae707-3412-4468-8ad4-5db97ef07c32" />
 
 Grafikte ortalama şikayet süresi 81.5 gün olarak tespit edilmiştir.
 2.5 Şikayetlerin İllere Göre Dağılımı
 Verilere göre şikayetlerin illere göre dağılımında en sorunlu 15 il ve şikayet yüzdeleri verilmiştir.
+<img width="945" height="544" alt="image" src="https://github.com/user-attachments/assets/8c47f5d0-5473-4717-9129-90bec873d9ed" />
+
 
 İstanbul ve Ankara gibi büyükşehirlerin dışında “Muş” , “Ağrı” ve “Ordu” illerinin listede olması önemli bir sorundur.
 2.6 Yasal Risk Analizi
 Kimi müşteriler şikayetlerine yasal durumlarla tehdit etmektedir. Aşağıdaki grafikte yasal tehditte bulunan müşterilerin oranları bulunmaktadır.
 
+<img width="945" height="698" alt="image" src="https://github.com/user-attachments/assets/090676ad-b1e7-4c87-9497-b82887424449" />
+
+
 2.7 Müşteri Kaybı Analizi
 Kök neden ve alt kırılımlar bazlı olarak müşteri kaybı analizi yapıldığında elde edilen grafik aşağıda sunulmuştur.
+
+<img width="945" height="550" alt="image" src="https://github.com/user-attachments/assets/0d413419-d86d-4ae2-bd52-73c1c2629d68" />
 
 
 Buna göre en çok müşteri kaybına neden olabilecek alt kırılmlar aşağıdaki grafikte verilmiştir.
 
+<img width="945" height="556" alt="image" src="https://github.com/user-attachments/assets/36af152c-4643-49ef-9977-4943a468040d" />
+
+
 En çok müşteri kaybına neden olabilecek alt nedenler, “ulaşılamama”, “konfor” ve “yalan beyan” konularıdır.
 Müşteri kaybını tetikleyen faktörler incelendiğinde aşağıdaki grafikte faktörler verilmiştir.
+
+<img width="945" height="550" alt="image" src="https://github.com/user-attachments/assets/f268fbef-416b-4f3b-a98b-4cc7065cf203" />
+
+
 
 Yasal risk ve uzun bekleme süreleri müşterileri tekrar alışveriş yapmamaya iten nedenlerin en başında gelmektedir.
 
