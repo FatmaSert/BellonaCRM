@@ -1,4 +1,4 @@
-Bellona Yönetici Özeti ve Durum Raporu
+# Bellona Yönetici Özeti ve Durum Raporu
 Tarih: 19 Ocak 2026 Konu: Şikayetvar Verileri Üzerinden Müşteri Deneyimi ve Kök Neden Analizi
 1. Yönetici Özeti
 Bu rapor, Bellona markasına yönelik dijital platformlarda (Şikayetvar.com) yer alan müşteri geri bildirimlerinin yapay zeka destekli analizi sonucunda hazırlanmıştır. Analiz, markanın müşteri sadakatini doğrudan etkileyen "Teslimat", "Ürün Kalitesi" ve "Satış Sonrası Hizmetler" alanlarında kritik darboğazlar yaşadığını ortaya koymaktadır. Çalışmada ayrıca tespit edilen problemlere çözüm önerileri sunulmuştur.
