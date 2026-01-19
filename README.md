@@ -5,33 +5,44 @@
 **1. Giriş ve Proje Amacı**
 Günümüz rekabetçi pazar koşullarında, müşteri memnuniyeti ve satış sonrası destek, marka sadakatini belirleyen en kritik faktörlerdendir. Bu projenin temel amacı, Türkiye'nin önde gelen mobilya markalarından biri olan Bellona hakkında, popüler tüketici şikayet platformu Sikayetvar.com üzerinde yayınlanan kullanıcı şikayetlerini sistematik olarak toplamak, analiz etmek ve temel problem alanlarını (kök nedenleri) tespit etmektir.
 Bu çalışma, ham veri madenciliği (web scraping) teknikleri kullanılarak yapılandırılmamış metin verisinin toplanması ve ardından Doğal Dil İşleme (NLP) ön hazırlık teknikleri ve kural tabanlı algoritmalarla anlamlı içgörülere dönüştürülmesi sürecini kapsamaktadır.
+
 **2. Metodoloji**
+
 Proje, temel olarak iki ana teknik evreden oluşmaktadır: Veri Toplama (Data Collection) ve Veri Analizi (Data Analysis).
+
 **2.1 Veri Toplama Süreci (Web Scraping)**
+
 Veri toplama işlemi için Python programlama dili ve BeautifulSoup kütüphanesi kullanılarak özel bir web kazıma algoritması (scraper) geliştirilmiştir. Bu algoritma aşağıdaki teknik prensiplerle çalışmaktadır:
 Dinamik Sayfalandırma (Pagination): Algoritma, şikayetlerin listelendiği ana sayfaları (page=1, page=2 vb.) iteratif olarak gezmektedir. Bu süreçte, sayfa yönlendirmeleri (redirection) kontrol edilerek, var olmayan bir sayfaya gidildiğinde (örneğin son sayfadan sonra başa dönme durumu) tarama işlemi otomatik olarak sonlandırılmaktadır.
 Tam Metin Çıkarımı: Liste sayfalarından elde edilen her bir şikayet bağlantısı (URL) detaylı bir şekilde ziyaret edilmektedir. Sadece başlık değil, şikayetin tüm detaylarını içeren "Full Text" (tam metin), kullanıcı adı, tarih ve şikayet ID'si gibi özellikler ayrıştırılmaktadır (parsing).
 Eşzamanlı İşleme (Concurrency): Veri toplama hızını artırmak ve ağ gecikmelerini minimize etmek amacıyla concurrent.futures.ThreadPoolExecutor kullanılarak çoklu iş parçacığı (multithreading) mimarisi uygulanmıştır. Bu sayede aynı anda 5 farklı şikayet sayfası işlenebilmekte, toplam işlem süresi önemli ölçüde düşürülmektedir.
 Hata Yönetimi ve Süreklilik: Ağ hatalarına (network timeouts) karşı dirençli bir yapı kurulmuş ve daha önce taranan verilerin tekrar taranmasını önlemek için bir "resume" (kaldığı yerden devam etme) mekanizması eklenmiştir.
 Elde edilen veriler, yapısal bir format olan CSV (bellona_sikayetleri.csv) dosyasına kaydedilerek analize hazır hale getirilmiştir.
+
 **2.2 Veri Ön İşleme ve Zenginleştirme**
+
 Ham veri analize girmeden önce temizlik ve birleştirme işlemlerine tabi tutulmuştur:
 Metin Birleştirme: Şikayet başlığı (Title) ve şikayet detayı (Full Text) birleştirilerek, analizin daha geniş bir bağlamda yapılması sağlanmıştır.
 Normalizasyon: Tüm metinler küçük harfe çevrilerek, büyük/küçük harf duyarlılığından kaynaklanabilecek analiz hatalarının önüne geçilmiştir.
 Eksik Veri Yönetimi: Boş alanlar doldurularak veri bütünlüğü sağlanmıştır
 
 **2.3 Analiz ve Kategorizasyon Stratejisi**
+
 Toplanan veriler üzerinde yapılan analizler, şikayetlerin kök nedenlerini belirlemeye odaklanmıştır. Bu kapsamda kural tabanlı (rule-based) bir sınıflandırma yaklaşımı benimsenmiştir:
 
 Hiyerarşik Kategori Haritalama: Şikayetler, önceden tanımlanmış ana kategoriler (Örn: "Teslimat ve Lojistik", "Servis ve İletişim") ve alt kategoriler (Örn: "Aşırı Gecikme", "Kaba Üslup") bazında sınıflandırılmıştır.
 Anahtar Kelime Analizi : Her bir alt kategori için bu sorunu temsil eden özgün kelime havuzları (lexicon) oluşturulmuştur. Örneğin, "gelmedi", "haftalar geçti" gibi ifadeler "Teslimat Gecikmesi"ni işaret ederken; "bağırdı", "yüzüme kapattı" gibi ifadeler "Kaba Üslup" kategorisini tetiklemektedir.
 Keşifsel Analiz : "Diğer" (Unclassified) olarak işaretlenen veriler üzerinde yapılan örnekleme çalışmaları ile, mevcut kategorilere girmeyen ancak "servis" veya "müşteri hizmetleri" ile ilgili olan yeni problem alanlarının keşfedilmesi hedeflenmiştir.
+
 **3. Bulgular ve Teknik Değerlendirme**
+
 Yapılan kod analizi ve veri incelemesi sonucunda projenin şu teknik yetkinliklere sahip olduğu görülmüştür:
 Ölçeklenebilirlik: Geliştirilen kazıma motoru, binlerce şikayeti kesintisiz olarak çekebilecek bir mimariye sahiptir.
 Veri Kalitesi Güvencesi: Özellikle "Full Text" (Tam Metin) alanının doğru çekilmesi için yapılan son düzeltmeler, analizin yüzeysel başlıklardan ziyade detaylı müşteri deneyimlerine dayanmasını sağlamıştır.
 Dinamik Kategori Tespiti: Proje statik bir analizden ziyade, veriye dayalı olarak kategorilerini geliştiren ("Diğer" kategorisindeki verilerin incelenmesi gibi) iteratif bir yapıdadır.
+
 **4. Sonu**
+
 Bu proje, bir öğrenci çalışması olarak, veri bilimi yaşam döngüsünün kritik aşamaları olan veri toplama, temizleme ve keşifsel analiz süreçlerini başarıyla modellemektedir. Yapılan çalışma, Bellona markasının müşteri deneyimi karnesini çıkarmak için gerekli teknik altyapıyı sağlamış olup, marka yetkililerine "teslimat süreleri" ve "çağrı merkezi iletişimi" gibi spesifik alanlarda iyileştirme yapmaları gerektiğini gösteren somut veriler sunmaktadır.
 
 
