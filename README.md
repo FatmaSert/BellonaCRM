@@ -10,6 +10,7 @@ Proje kapsamında geliştirilen veri madenciliği algoritmaları ile yüzlerce g
 %35 - Ürün Kalitesi (Erken Deformasyon): Müşterilerin önemli bir kısmı, ürün tesliminden sonraki ilk 3-6 ay içinde "kumaş tüylenmesi", "sünger çökmesi" ve "dikiş hatası" gibi kalite sorunları bildirmektedir.
 %25 - İletişim ve Servis: Şikayetlerin çözümsüz kalmasındaki en büyük etkenin, bayiler ve genel merkez arasındaki kopukluk olduğu, müşterilerin "muhatap bulamama" sorunu yaşadığı görülmüştür.
 
+<img width="1196" height="624" alt="image" src="https://github.com/user-attachments/assets/5ed25021-2b39-4e38-9c7d-3ffb1a2d4dc4" />
 
 
 2.2 Alt Kırılmların Dağılımı
